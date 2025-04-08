@@ -1,26 +1,40 @@
 import Link from 'next/link';
 import MenuNav from '../(home)/components/sections/menu';
-import DividerVertical from '@/components/divider/dividerVertical';
 import Divider from '@/components/divider';
 import Contact from '../(home)/components/sections/contact';
 import Footer from '../(home)/components/sections/footer';
 import MapWithRadius from './maps/componets';
+import { twMerge } from 'tailwind-merge';
 
 export default function ContactsPage() {
   return (
     <div className="flex min-h-screen flex-col  bg-white">
       <MenuNav />
-      <div className="bg-[#E3E7EC] flex flex-col items-center justify-center h-[300px] py-[60px]">
+      <div
+        className={twMerge(
+          'bg-[#E3E7EC] flex flex-col items-center justify-center h-[300px] py-[60px] px-10',
+          'md:px-20 ',
+          ' lg:px-40 ',
+          ' 2xl:px-(187px) ',
+        )}
+      >
         <h1 className="text-[#384654] text-[50px] font-bold mb-[12px]">
           Contact Us
         </h1>
-        <p className="text-[#556273] text-[18px] ">
+        <p className="text-[#556273] text-center text-[18px] ">
           We&apos;re here to help. Choose the contact channel that best suits
           your needs.
         </p>
       </div>
 
-      <section className="flex flex-col justify-center text-[#384654] px-[165px] py-[60px]">
+      <section
+        className={twMerge(
+          'flex flex-col justify-center text-[#384654] px-10 py-[60px]',
+          'md:px-20 ',
+          ' lg:px-40 ',
+          ' 2xl:px-(187px) ',
+        )}
+      >
         <div className="flex flex-col items-start justify-start gap-[40px]">
           <h1 className="text-[#384654] text-[36px] font-semibold">
             Our Contact Channels
@@ -30,7 +44,12 @@ export default function ContactsPage() {
             We&apos;re ready to answer your questions and provide support.
           </p>
         </div>
-        <div className="flex flex-row items-center justify-center gap-4 bg-[#D3D3D3] rounded-md px-[60px]  py-[40px] mt-[80px]">
+        <div
+          className={twMerge(
+            'flex flex-col items-center justify-center gap-4 bg-[#D3D3D3] rounded-md p-10 mt-[80px]',
+            'md:flex-row',
+          )}
+        >
           <div className="flex flex-col items-center justify-center gap-[12px]">
             <img src="/Assets/socialMedia/sms.svg" alt="sms" />
             <h1 className="text-[#384654] text-[24px] font-medium">SMS</h1>
@@ -39,7 +58,12 @@ export default function ContactsPage() {
               <Link href="sms:+1 (732) 210-7667">Send</Link>
             </button>
           </div>
-          <DividerVertical />
+          <div
+            className={twMerge(
+              'bg-[#AFAFAF] my-[30px] mx-[30px] h-[1px] w-full',
+              'lg:w-[2px] lg:h-[200px] lg:bg-[#AFAFAF] ',
+            )}
+          />
           <div className="flex flex-col items-center justify-center gap-[12px]">
             <img src="/Assets/socialMedia/instagram-azul.svg" alt="instagram" />
             <h1 className="text-[#384654] text-[24px] font-medium">
@@ -56,7 +80,12 @@ export default function ContactsPage() {
               </Link>
             </button>
           </div>
-          <DividerVertical />
+          <div
+            className={twMerge(
+              'bg-[#AFAFAF] my-[30px] mx-[30px] h-[1px] w-full',
+              'lg:w-[2px] lg:h-[200px] lg:bg-[#AFAFAF] ',
+            )}
+          />
           <div className="flex flex-col items-center justify-center gap-[12px]">
             <img src="/Assets/socialMedia/email.svg" alt="e-mail" />
             <h1 className="text-[#384654] text-[24px] font-medium">E-mail</h1>
@@ -70,7 +99,14 @@ export default function ContactsPage() {
         </div>
       </section>
       <Divider />
-      <section className="flex flex-col justify-center text-[#384654] px-[165px] py-[60px]">
+      <section
+        className={twMerge(
+          'flex flex-col justify-center text-[#384654] px-10 py-[60px]',
+          'md:px-20',
+          'lg:px-40',
+          '2xl:px-[187px]',
+        )}
+      >
         <div className="flex flex-col items-start justify-start gap-[40px]">
           <h1 className="text-[#384654] text-[36px] font-semibold">
             Service Area

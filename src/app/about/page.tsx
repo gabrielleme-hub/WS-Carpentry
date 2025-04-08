@@ -1,16 +1,28 @@
-import DividerVertical from '@/components/divider/dividerVertical';
 import Divider from '@/components/divider';
 import Contact from '../(home)/components/sections/contact';
 import Footer from '../(home)/components/sections/footer';
 import MenuNav from '../(home)/components/sections/menu';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col  bg-white">
       <MenuNav />
-      <div className="bg-[#E3E7EC] flex flex-col items-center justify-center h-[300px]">
-        <h1 className="text-[#384654] text-[50px] font-bold mb-4">
+      <div
+        className={twMerge(
+          'bg-[#E3E7EC] flex flex-col items-center justify-center h-[300px] px-10',
+          'md:px-20',
+          'lg:px-40',
+          '2xl:px-[187px]',
+        )}
+      >
+        <h1
+          className={twMerge(
+            'text-[#384654] text-[36px] font-bold mb-4',
+            'md:text:[50px] ',
+          )}
+        >
           About WS Interior Carpentry
         </h1>
         <p className="text-[#556273] text-[18px] mb-6">
@@ -18,7 +30,14 @@ export default function AboutPage() {
         </p>
       </div>
       {/* Journey */}
-      <section className="flex flex-col justify-center text-[#384654] px-[165px] py-[60px]">
+      <section
+        className={twMerge(
+          'flex flex-col justify-center text-[#384654] px-10 py-[60px]',
+          'md:px-20',
+          'lg:px-40',
+          '2xl:px-[187px]',
+        )}
+      >
         <div className="flex flex-col items-start justify-start gap-[40px]">
           <h1 className="text-[#384654] text-[36px] font-semibold">
             Our Journey
@@ -28,7 +47,13 @@ export default function AboutPage() {
             grown through dedication and a commitment to quality.
           </p>
         </div>
-        <div className="flex flex-row items-center justify-around gap-[60px] bg-[#D3D3D3] rounded-md px-[40px]  py-[40px] mt-[80px]">
+        <div
+          className={twMerge(
+            'flex flex-col items-center justify-around gap-4 bg-[#D3D3D3] rounded-md p-10 mt-[80px]',
+            'lg:flex-row ',
+            '2xl:gap-10',
+          )}
+        >
           {[
             {
               year: '2022',
@@ -55,21 +80,37 @@ export default function AboutPage() {
             },
           ].map(({ year, title, description }, index) => (
             <React.Fragment key={index}>
-              <div className="flex flex-col  gap-[12px]">
+              <div className={twMerge('flex flex-col  gap-4')}>
                 <h1 className="text-[16px] font-bold text-[#384654]">{year}</h1>
                 <h2 className="text-[16px] font-medium text-[#384654]">
                   {title}
                 </h2>
                 <p className="text-[12px] text-[#556273]">{description}</p>
               </div>
-              {index < 3 && <DividerVertical />}
+              {index < 3 && (
+                <div
+                  className={twMerge(
+                    'bg-[#AFAFAF] my-[30px] mx-[30px] h-[1px] w-full',
+                    'lg:w-[2px] lg:h-[200px] lg:bg-[#AFAFAF] ',
+                  )}
+                />
+              )}
             </React.Fragment>
           ))}
         </div>
       </section>
+
       <Divider />
+
       {/* Mission, Vision, and Values */}
-      <section className="flex flex-col justify-center text-[#384654] px-[165px] py-[4%]">
+      <section
+        className={twMerge(
+          'flex flex-col justify-center text-[#384654] px-10 py-[4%]',
+          'md:px-20',
+          'lg:px-40',
+          '2xl:px-[187px]',
+        )}
+      >
         <div className="flex flex-col items-start justify-start ">
           <h1 className="text-[#384654] text-[36px] semi-bold mb-[16px]">
             Mission, Vision, and Values
@@ -115,9 +156,18 @@ export default function AboutPage() {
           </ul>
         </div>
       </section>
+
       <Divider />
+
       {/* Work Line */}
-      <section className="flex flex-col justify-center text-[#384654] px-[165px] py-[4%]">
+      <section
+        className={twMerge(
+          'flex flex-col justify-center text-[#384654] px-10 py-[4%]',
+          'md:px-20',
+          'lg:px-40',
+          '2xl:px-[187px]',
+        )}
+      >
         <div className="flex flex-col items-start justify-start gap-[40px]">
           <h1 className="text-[#384654] text-[36px] font-semibold">
             Work Line
@@ -126,8 +176,13 @@ export default function AboutPage() {
             Explore the range of our woodworking services and specialties.
           </p>
         </div>
-        <div className="flex flex-row items-center justify-around ">
-          <div className="flex flex-col items-center justify-center bg-[#384654] w-72 h-52 rounded-md gap-[10px]">
+        <div
+          className={twMerge(
+            'flex flex-col gap-10  items-center justify-around ',
+            'md:flex-row md:text-center',
+          )}
+        >
+          <div className="flex flex-col items-center justify-center bg-[#384654] w-full h-52 rounded-md gap-[10px]">
             <img
               src="/Assets/workLine/constructionPlanning.svg"
               alt="planning"
@@ -138,7 +193,7 @@ export default function AboutPage() {
               Construction planning
             </h1>
           </div>
-          <div className="flex flex-col items-center justify-center bg-[#384654] w-72 h-52 rounded-md gap-[10px]">
+          <div className="flex flex-col items-center justify-center bg-[#384654] w-full h-52 rounded-md gap-[10px]">
             <img
               src="/Assets/workLine/payvector.svg"
               alt="planning"
@@ -149,7 +204,7 @@ export default function AboutPage() {
               Acquisition of resources
             </h1>
           </div>
-          <div className="flex flex-col items-center justify-center bg-[#384654] w-72 h-52 rounded-md gap-[10px]">
+          <div className="flex flex-col items-center justify-center bg-[#384654] w-full h-52 rounded-md gap-[10px]">
             <img
               src="/Assets/workLine/execution.svg"
               alt="planning"

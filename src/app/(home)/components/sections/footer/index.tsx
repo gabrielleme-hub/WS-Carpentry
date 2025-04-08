@@ -4,7 +4,14 @@ import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 export default function Footer() {
   return (
-    <footer className="bg-[#384654] text-white flex flex-col items-center justify-center py-10 px-10 gap-4">
+    <footer
+      className={twMerge(
+        'bg-[#384654] text-white flex flex-col items-center justify-center py-10 px-10 gap-4',
+        'md:px-20',
+        'lg:px-40',
+        '2xl:px-(187px)',
+      )}
+    >
       <div
         className={twMerge(
           'flex flex-col items-center justify-between w-full mb-[24px] gap-4',
@@ -21,10 +28,18 @@ export default function Footer() {
           ©2025 WS Interior Carpentry LLC
         </p>
       </div>
-      <div className="border-t h-[3px] border-[#E3E7EC] w-full opacity-20" />
       <div
         className={twMerge(
-          'flex flex-col gap-6 items-center justify-between w-full mt-[24px]',
+          'border-t h-[3px] border-[#E3E7EC] w-full px-10 opacity-20',
+          'md:px-20',
+          'lg:px-40',
+          '2xl:px-(187px)',
+        )}
+      />
+      <div
+        className={twMerge(
+          'flex flex-col gap-6 items-center justify-between w-full  mt-[24px]',
+          'md:flex-row ',
         )}
       >
         <nav className="flex items-center justify-between gap-4 text-[#E3E7EC]">
