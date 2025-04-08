@@ -1,9 +1,14 @@
 deployment:
   tasks:
-    - export NODE_ENV=production
     - source /opt/cpanel/ea-nodejs22/enable
-    - echo "📁 Diretorio:"
-    - ls
+    - export NODE_ENV=production
+    - echo "📁 Diretório de deploy: $DEPLOYDIR"
+    - cd $DEPLOYDIR
     - npm install
-    - npm run build # → Gera a pasta .next
-    - npm run start # → Usa a .next pra servir o app
+    - npm run build
+    - npm run export
+    - echo "📂 Conteúdo da pasta out:"
+    - ls -lah out
+    - echo "🚀 Copiando arquivos para public_html"
+    - rm -rf ~/public_html/*
+    - cp -r out/* ~/public_html/
