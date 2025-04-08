@@ -1,4 +1,7 @@
-name: ws-carpentry-2
-nodejs_version: 22
-app_directory: .next
-app_command: npm run build && npm run start
+deployment:
+  tasks:
+    - export NODE_ENV=production
+    - source /opt/cpanel/ea-nodejs20/enable
+    - npm install
+    - npm run build # → Gera a pasta .next
+    - npm run start # → Usa a .next pra servir o app
