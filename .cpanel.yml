@@ -1,7 +1,9 @@
 deployment:
   tasks:
     - export NODE_ENV=production
-    - source /opt/cpanel/ea-nodejs20/enable
+    - source /opt/cpanel/ea-nodejs22/enable
+    - echo "📁 Diretorio:"
+    - ls
     - npm install
     - npm run build # → Gera a pasta .next
     - npm run start # → Usa a .next pra servir o app
