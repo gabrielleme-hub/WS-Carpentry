@@ -1,8 +1,10 @@
+'use client';
 import { twMerge } from 'tailwind-merge';
 import Contact from '../(home)/components/sections/contact';
 import Footer from '../(home)/components/sections/footer';
 import MenuNav from '../(home)/components/sections/menu';
 import Link from 'next/link';
+import { works } from '@/Services/api/works';
 
 export default function WorksPage() {
   return (
@@ -47,57 +49,27 @@ export default function WorksPage() {
                   'lg:grid-cols-3',
                 )}
               >
-                {/* Project 1 */}
-                <div className="flex flex-col justify-center gap-[13px] ">
-                  <div className="bg-gray-400 w-[300px] h-[200]  rounded-md " />
-                  <h1 className="text-[24px] font-bold">Project 1</h1>
-                  <Link
-                    href="/worksDetails"
-                    className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded-[6px] w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base"
+                {works.map((project) => (
+                  <div
+                    key={project.id}
+                    className="flex flex-col justify-center gap-[13px] "
                   >
-                    View Project
-                  </Link>
-                </div>
-                {/* Project 2 */}
-                <div className="flex flex-col justify-center gap-[13px] ">
-                  <div className="bg-gray-400 w-[300px] h-[200]  rounded-md " />
-                  <h1 className="text-[24px] font-bold">Project 2</h1>
-                  <button className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded-[6px] w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base">
-                    View Project
-                  </button>
-                </div>
-                {/* Project 3 */}
-                <div className="flex flex-col justify-center gap-[13px] ">
-                  <div className="bg-gray-400 w-[300px] h-[200]  rounded-md " />
-                  <h1 className="text-[24px] font-bold">Project 3</h1>
-                  <button className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded-[6px] w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base">
-                    View Project
-                  </button>
-                </div>
-                {/* Project 4 */}
-                <div className="flex flex-col justify-center gap-[13px] ">
-                  <div className="bg-gray-400 w-[300px] h-[200]  rounded-md " />
-                  <h1 className="text-[24px] font-bold">Project 4</h1>
-                  <button className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded-[6px] w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base">
-                    View Project
-                  </button>
-                </div>
-                {/* Project 5 */}
-                <div className="flex flex-col justify-center gap-[13px] ">
-                  <div className="bg-gray-400 w-[300px] h-[200]  rounded-md " />
-                  <h1 className="text-[24px] font-bold">Project 5</h1>
-                  <button className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded-[6px] w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base">
-                    View Project
-                  </button>
-                </div>
-                {/* Project 6 */}
-                <div className="flex flex-col justify-center gap-[13px] ">
-                  <div className="bg-gray-400 w-[300px] h-[200]  rounded-md " />
-                  <h1 className="text-[24px] font-bold">Project 6 </h1>
-                  <button className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base">
-                    View Project
-                  </button>
-                </div>
+                    <div
+                      className="bg-gray-400 w-[300px] h-[200px]  rounded-md "
+                      style={{
+                        backgroundImage: `url(${project.coverImage})`,
+                        backgroundSize: 'cover',
+                      }}
+                    />
+                    <h1 className="text-[24px] font-bold">{project.title}</h1>
+                    <Link
+                      href={`/worksDetails?id=${project.id}`}
+                      className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded-[6px] w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base"
+                    >
+                      View Project
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

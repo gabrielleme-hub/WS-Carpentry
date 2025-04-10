@@ -22,13 +22,89 @@ export default function MyWorks() {
           <div
             className={twMerge(
               'flex flex-col items-center w-full justify-around gap-4 mb-[80px] ',
-              'md:flex-row justify-around   ',
+              'md:flex-row justify-around',
             )}
           >
-            <div className="bg-gray-400 w-full h-52  rounded-md "></div>
-            <div className="bg-gray-400 w-full h-52  rounded-md "></div>
-            <div className="bg-gray-400 w-full h-52  rounded-md "></div>
-            <div className="bg-gray-400 w-full h-52  rounded-md "></div>
+            {/* Image 1 */}
+            <div
+              className="bg-gray-400 w-full h-72 rounded-md relative overflow-hidden"
+              style={{
+                backgroundImage:
+                  'url("/Assets/images/imagens/projectOne/escada-depois.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div
+                className="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100"
+                style={{
+                  backgroundImage:
+                    'url("/Assets/images/imagens/projectOne/escada-antes.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
+            </div>
+            {/* Image 2 */}
+            <div
+              className="bg-gray-400 w-full h-72 rounded-md relative overflow-hidden"
+              style={{
+                backgroundImage:
+                  'url("/Assets/images/imagens/projectTwo/quarto-depois1.1.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div
+                className="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100"
+                style={{
+                  backgroundImage:
+                    'url("/Assets/images/imagens/projectTwo/quarto-antes1.1.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
+            </div>
+            {/* Image 3 */}
+            <div
+              className="bg-gray-400 w-full h-72 rounded-md relative overflow-hidden"
+              style={{
+                backgroundImage:
+                  'url("/Assets/images/imagens/projectTree/depois.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div
+                className="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100"
+                style={{
+                  backgroundImage:
+                    'url("/Assets/images/imagens/projectTree/antes-1.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
+            </div>
+            {/* Image 4 */}
+            <div
+              className="bg-gray-400 w-full h-72 rounded-md relative overflow-hidden"
+              style={{
+                backgroundImage:
+                  'url("/Assets/images/imagens/projectFour/depois.jpg")',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+              }}
+            >
+              <div
+                className="absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100"
+                style={{
+                  backgroundImage:
+                    'url("/Assets/images/imagens/projectFour/antes.jpg")',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              ></div>
+            </div>
           </div>
           <Link
             href="/works"

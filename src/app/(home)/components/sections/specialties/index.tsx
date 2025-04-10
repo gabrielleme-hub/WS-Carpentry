@@ -50,7 +50,14 @@ export default function Specialties() {
         home framing, or restoring timeless spaces, we transform wood into
         masterpieces.
       </p>
-      <div className=" text-[#384654] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px] mb-[60px] ">
+      <div
+        className={twMerge(
+          ' text-[#384654] grid grid-cols-1 gap-[40px] mb-[60px] ',
+          'md:grid-cols-2 ',
+          'lg:grid-cols-3 ',
+          '2xl:grid-cols-5 ',
+        )}
+      >
         {specialties.map((item, index) => (
           <div
             key={index}
@@ -58,7 +65,7 @@ export default function Specialties() {
               'flex flex-col  items-center px-10 gap-4 text-center',
               'md:w-full ',
               'lg:w-full lg:px-0 lg:items-start lg:text-start',
-              '2xl:px-[187px]',
+              ' justify-around',
             )}
           >
             <div className="text-4xl text-[#384654]">{item.icon}</div>
