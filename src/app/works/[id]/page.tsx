@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { works } from '@/services/api/works';
+import { works } from '@/servicess/api/works';
 import { Work } from '@/types/api/works';
 
 interface WorkDetailsPageParams {

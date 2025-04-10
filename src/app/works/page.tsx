@@ -2,7 +2,7 @@
 import { twMerge } from 'tailwind-merge';
 import Contact from '../(home)/components/sections/contact';
 import Link from 'next/link';
-import { works } from '@/services/api/works';
+import { works } from '@/servicess/api/works';
 
 export default function WorksPage() {
   return (
