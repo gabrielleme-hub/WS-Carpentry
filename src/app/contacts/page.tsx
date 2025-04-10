@@ -1,15 +1,13 @@
 import Link from 'next/link';
-import MenuNav from '../(home)/components/sections/menu';
 import Divider from '@/components/divider';
 import Contact from '../(home)/components/sections/contact';
-import Footer from '../(home)/components/sections/footer';
 import MapWithRadius from './maps/componets';
 import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
 
 export default function ContactsPage() {
   return (
-    <div className="flex min-h-screen flex-col  bg-white">
-      <MenuNav />
+    <>
       <div
         className={twMerge(
           'bg-[#E3E7EC] flex flex-col items-center justify-center h-[300px] py-[60px] px-10',
@@ -46,12 +44,17 @@ export default function ContactsPage() {
         </div>
         <div
           className={twMerge(
-            'flex flex-col items-center justify-center gap-4 bg-[#D3D3D3] rounded-md p-10 mt-[80px]',
+            'flex flex-col items-center justify-around gap-4 bg-[#D3D3D3] rounded-md p-10 mt-[80px]',
             'md:flex-row',
           )}
         >
           <div className="flex flex-col items-center justify-center gap-[12px]">
-            <img src="/Assets/socialMedia/sms.svg" alt="sms" />
+            <Image
+              src="/Assets/socialMedia/sms.svg"
+              alt="sms"
+              width={40}
+              height={40}
+            />
             <h1 className="text-[#384654] text-[24px] font-medium">SMS</h1>
             <p className="text-[#384654] text-[16px]">(732) 210-7667</p>
             <button className="flex items-center justify-center bg-[#384654] text-[#E3E7EC] py-2 px-4 rounded w-[144px] mx-auto h-[30px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base">
@@ -65,7 +68,12 @@ export default function ContactsPage() {
             )}
           />
           <div className="flex flex-col items-center justify-center gap-[12px]">
-            <img src="/Assets/socialMedia/instagram-azul.svg" alt="instagram" />
+            <Image
+              src="/Assets/socialMedia/instagram-azul.svg"
+              alt="instagram"
+              width={40}
+              height={40}
+            />
             <h1 className="text-[#384654] text-[24px] font-medium">
               Instagram
             </h1>
@@ -87,7 +95,12 @@ export default function ContactsPage() {
             )}
           />
           <div className="flex flex-col items-center justify-center gap-[12px]">
-            <img src="/Assets/socialMedia/email.svg" alt="e-mail" />
+            <Image
+              src="/Assets/socialMedia/email.svg"
+              alt="e-mail"
+              width={40}
+              height={40}
+            />
             <h1 className="text-[#384654] text-[24px] font-medium">E-mail</h1>
             <p className="text-[#384654] text-[16px]">
               wsinteriorcarpentry@gmail.com
@@ -120,7 +133,6 @@ export default function ContactsPage() {
         <MapWithRadius />
       </section>
       <Contact />
-      <Footer />
-    </div>
+    </>
   );
 }

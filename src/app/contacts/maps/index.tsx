@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import * as ReactGoogleMaps from '@react-google-maps/api';
 export function initMap(mapRef: { current: HTMLElement }) {
   if (mapRef.current && window.google) {
     const map = new window.google.maps.Map(mapRef.current, {

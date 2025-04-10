@@ -1,14 +1,12 @@
 import Divider from '@/components/divider';
 import Contact from '../(home)/components/sections/contact';
-import Footer from '../(home)/components/sections/footer';
-import MenuNav from '../(home)/components/sections/menu';
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <div className="flex min-h-screen flex-col  bg-white">
-      <MenuNav />
+    <>
       <div
         className={twMerge(
           'bg-[#E3E7EC] flex flex-col items-center justify-center h-[300px] px-10',
@@ -183,7 +181,7 @@ export default function AboutPage() {
           )}
         >
           <div className="flex flex-col items-center justify-center bg-[#384654] w-full h-52 rounded-md gap-[10px]">
-            <img
+            <Image
               src="/Assets/workLine/constructionPlanning.svg"
               alt="planning"
               width={100}
@@ -194,7 +192,7 @@ export default function AboutPage() {
             </h1>
           </div>
           <div className="flex flex-col items-center justify-center bg-[#384654] w-full h-52 rounded-md gap-[10px]">
-            <img
+            <Image
               src="/Assets/workLine/payvector.svg"
               alt="planning"
               width={100}
@@ -205,7 +203,7 @@ export default function AboutPage() {
             </h1>
           </div>
           <div className="flex flex-col items-center justify-center bg-[#384654] w-full h-52 rounded-md gap-[10px]">
-            <img
+            <Image
               src="/Assets/workLine/execution.svg"
               alt="planning"
               width={100}
@@ -218,7 +216,6 @@ export default function AboutPage() {
         </div>
       </section>
       <Contact />
-      <Footer />
-    </div>
+    </>
   );
 }

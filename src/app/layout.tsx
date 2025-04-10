@@ -1,6 +1,9 @@
+// Server component
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import './globals.css';
+import MenuNav from './(home)/components/sections/menu';
+import Footer from './(home)/components/sections/footer';
 
 const roboto = Roboto({
   variable: '--font-roboto',
@@ -23,7 +26,11 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${roboto.variable} ${roboto.variable} antialiased`}>
-        {children}
+        <div className="flex min-h-screen flex-col bg-white">
+          <MenuNav />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

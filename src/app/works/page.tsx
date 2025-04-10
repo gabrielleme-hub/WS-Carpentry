@@ -1,15 +1,12 @@
 'use client';
 import { twMerge } from 'tailwind-merge';
 import Contact from '../(home)/components/sections/contact';
-import Footer from '../(home)/components/sections/footer';
-import MenuNav from '../(home)/components/sections/menu';
 import Link from 'next/link';
-import { works } from '@/Services/api/works';
+import { works } from '@/services/api/works';
 
 export default function WorksPage() {
   return (
-    <div className="flex min-h-screen flex-col  bg-white">
-      <MenuNav />
+    <>
       <div
         className={twMerge(
           'bg-[#E3E7EC] flex flex-col items-center justify-center h-[300px] px-10 py-[60px]',
@@ -63,7 +60,7 @@ export default function WorksPage() {
                     />
                     <h1 className="text-[24px] font-bold">{project.title}</h1>
                     <Link
-                      href={`/worksDetails?id=${project.id}`}
+                      href={`/works/${project.id}`}
                       className="flex items-center justify-center bg-[#384654] text-white py-2 px-4 rounded-[6px] w-[300px]  h-[28px] hover:bg-[#556273] transition duration-300 ease-in-out text-[12px] font-bold md:text-base"
                     >
                       View Project
@@ -76,7 +73,6 @@ export default function WorksPage() {
         </div>
       </section>
       <Contact />
-      <Footer />
-    </div>
+    </>
   );
 }

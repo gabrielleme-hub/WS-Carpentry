@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
@@ -25,7 +26,7 @@ export default function Footer() {
           height={100}
         />
         <p className="copyright text-[14px]">
-          ©2025 WS Interior Carpentry LLC
+          © {new Date().getFullYear()} WS Interior Carpentry LLC
         </p>
       </div>
       <div
