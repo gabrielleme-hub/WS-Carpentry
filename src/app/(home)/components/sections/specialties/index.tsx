@@ -1,4 +1,4 @@
-import { Hammer, Home, Layers, RefreshCw, Ruler } from 'lucide-react';
+import { Hammer, Layers, RefreshCw, Ruler } from 'lucide-react';
 import { twMerge } from 'tailwind-merge';
 
 const specialties = [
@@ -16,11 +16,6 @@ const specialties = [
     title: 'Cabinet Making & Woodworking',
     desc: 'Custom cabinets and fine wood furniture.',
     icon: <Layers className="w-15 h-15" />,
-  },
-  {
-    title: 'Framing Carpentry',
-    desc: 'Building frameworks for homes and buildings.',
-    icon: <Home className="w-15 h-15" />,
   },
   {
     title: 'Remodeling & Restoration',

@@ -28,7 +28,8 @@ export const works = [
   {
     id: '3',
     title: 'Work 3',
-    description: 'Description for Work 3',
+    description:
+      'This project showcases the interior renovation of a room. Starting with unfinished walls and floors, the images illustrate the process of painting the walls light gray, installing new lighting fixtures, and laying new wood flooring. The final results demonstrate a completed and refreshed living space with a clean and modern design.',
     imagens: [
       '/Assets/images/imagens/projectTree/antes.jpg',
       '/Assets/images/imagens/projectTree/antes-1.jpg',
@@ -47,7 +48,8 @@ export const works = [
   {
     id: '4',
     title: 'Work 4',
-    description: 'Description for Work 4',
+    description:
+      'This project illustrates the renovation of a kitchen, focusing on the installation of new dark brown cabinets and a white subway tile backsplash. The initial images show the space before installation, with unfinished walls. The subsequent photos capture the assembly of the new upper and lower cabinets, the application of the backsplash, and the integration of new appliances, including a black refrigerator and a stainless steel dishwasher. The final result is a modernized kitchen with a sleek and functional design.',
     imagens: [
       '/Assets/images/imagens/projectFour/antes.jpg',
       '/Assets/images/imagens/projectFour/antes-1.jpg',
@@ -62,7 +64,8 @@ export const works = [
   {
     id: '5',
     title: 'Work 5',
-    description: 'Description for Work 5',
+    description:
+      'This project details the creation of a home theater in a previously unfinished basement. The renovation involves painting the walls, installing storage cabinets, and adding recessed lighting. The focal point is the setup of a projector and screen for an immersive viewing experience. Green LED strip lighting is strategically placed around the ceiling to enhance the ambiance. The final images show a comfortable and functional home theater space with seating.',
     imagens: [
       '/Assets/images/imagens/projectFifit/sotao-antes-2.jpg',
       '/Assets/images/imagens/projectFifit/sotao-antes-3.jpg',
@@ -78,7 +81,8 @@ export const works = [
   {
     id: '6',
     title: 'Work 6',
-    description: 'Description for Work 6',
+    description:
+      'This series of images documents the renovation of a kitchen, showcasing a significant transformation from a kitchen with dark wood accents and potentially older features to a brighter and more contemporary space. The initial photos show a kitchen with dark wood trim around the countertops, a dark wood cabinet to the left of the refrigerator, and open shelving displaying various items. The subsequent images reveal a kitchen with freshly painted light green or gray cabinets, lighter countertops, and the removal of the dark wood trim. The final images show the updated kitchen with a more cohesive and brighter aesthetic.',
     imagens: [
       '/Assets/images/imagens/projectSix/cozinha-before.jpg',
       '/Assets/images/imagens/projectSix/cozinha-before1.jpg',
