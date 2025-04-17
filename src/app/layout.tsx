@@ -11,8 +11,18 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'WS CARPENTRY',
-  description: 'Criado pelo Gabriel Leme',
+  title: 'WS CARPENTRY: Custom Carpentry and Furniture',
+  description:
+    'WS CARPENTRY: Specialists in custom carpentry in South River and surrounding areas. Custom furniture, wood structures, decks, pergolas, and more. Request your quote!',
+  authors: [{ name: 'Gabriel Leme' }],
+  openGraph: {
+    title: 'WS CARPENTRY: Custom Carpentry and Furniture',
+    description:
+      'WS CARPENTRY: Specialists in custom carpentry in South River and surrounding areas. Custom furniture, wood structures, decks, pergolas, and more. Request your quote!',
+    url: 'https://wsinteriorcarpentry.com',
+    locale: 'en_US',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
